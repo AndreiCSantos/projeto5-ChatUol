@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UOL</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo 1.png" alt="">
+        <div class="button-menu"><ion-icon name="people-sharp"></ion-icon></div>
+    </header>
+
+    <main></main>
+
+    <div class="chat">
+        <div class="content">
+            <div class="content-left">
+                <input type="text" placeholder="Escreva aqui..." class="input">
+                <p class="selected-participant-info">Enviando para Todos (Público)</p>
+            </div>
+            <div class="content-rigth" onclick="enviarMensagem()"><ion-icon name="paper-plane-outline"></ion-icon></div>
+        </div>
+    </div>
+
+    <div class="hidden-menu">
+        <div class="menu">
+            <div class="choose-contact">
+                <h2>Escolha um contato <br> para enviar mensagem:</h2>
+                <div class="contact" data-name="Todos" onclick="selecionarParticipante(this)">
+                    <ion-icon name="people-sharp"></ion-icon>
+                    <p>Todos</p>
+                    <img src="img/Vector.png" alt="Check">
+                </div>
+            </div>
+            <div class="choose-visibility">
+                <h2>Escolha a visibilidade:</h2>
+                <div class="visibility" data-type="publico" onclick="selecionarVisibilidade(this)">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <p>Público</p>
+                    <img src="img/Vector.png" alt="Check">
+                </div>
+                <div class="visibility" data-type="reservado" onclick="selecionarVisibilidade(this)">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <p>Reservadamente</p>
+                    <img src="img/Vector.png" alt="Check">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
